@@ -1,0 +1,30 @@
+.our_courses {
+    overflow: hidden;
+}
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+#courseRow {
+    white-space: nowrap;
+    
+    overflow: hidden;
+}
+
+
+#courseRow > div {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+    #courseRow > div {
+        flex: 0 0 55%;
+    }
+}
+
+

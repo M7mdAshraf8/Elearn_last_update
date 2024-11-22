@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem;">
+    <img [src]="courseItem.image" class="card-img-top" [alt]="courseItem.title">
+    <div class="card-body">
+        <h5 class="card-title">{{courseItem.title}}</h5>
+        <p class="card-text">{{courseItem.description}}</p>
+        <div class="details">
+            <p class="lessons-info">{{courseItem.lessonsInfo}}</p>
+            <p class="students-count">{{courseItem.students}}</p>
+        </div>
+        <div class="price-tag">{{courseItem.price}}</div>
+        <button class="btn btn-add-course" (click)="redirectToDetails(courseItem.id)">Details</button> 
+    </div>
+</div>

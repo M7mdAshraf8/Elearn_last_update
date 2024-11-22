@@ -1,0 +1,31 @@
+  <div class="container mt-5 course-container">
+    <div class="row">
+      
+      <div class="col-lg-6">
+        <img [src]="course.image" alt="Course Image" class="img-fluid course-image">
+      </div>
+  
+ 
+      <div class="col-lg-6">
+        <h1 class="course-title">{{course.name}}</h1>
+        <p class="course-description">{{course.description}}</p>
+  
+        <div class="d-flex align-items-center mb-4">
+          <span class="course-price">{{course.newPrice}}</span>
+          <span class="course-old-price">{{course.oldPrice}}</span>
+        </div>
+  
+        <ul class="course-details">
+          <li><strong>Students Enrolled:</strong> {{course.students}}<i class="fas fa-users me-2 icon-users"></i></li>
+          <li><strong>Lessons:</strong> {{course.lessons}}<i class="fas fa-book me-2 icon-book"></i></li>
+          <li><strong>Rating:</strong> {{course.rating}}  <i class="fas fa-star me-2 icon-star"></i></li>
+        </ul>
+
+        <div class="mt-4">
+          <button class="btn btn-enroll">Enroll Now</button>
+          <button class="btn btn-wishlist">Add to Wishlist</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

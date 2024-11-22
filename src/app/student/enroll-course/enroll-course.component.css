@@ -1,0 +1,143 @@
+main {
+  padding: 40px;
+  margin-left: 250px;
+  margin-top: 5vh;
+  width: 80%;
+  border-radius: 20px;
+  height: 90vh;
+  background-color: #ffffff;
+  border: 1px solid black;
+  overflow: auto;
+}
+
+.course-container {
+  background-color: #f5f7fa;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Course Image Styling */
+.course-image {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.course-image:hover {
+  transform: scale(1.03);
+}
+
+/* Course Title and Description */
+.course-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.course-description {
+  font-size: 1rem;
+  color: #5f6368;
+  margin-bottom: 20px;
+}
+
+/* Price Styling */
+.course-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #4a90e2;
+}
+
+.course-old-price {
+  font-size: 1.1rem;
+  color: #b0b7c3;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+/* Course Details */
+.course-details {
+  font-size: 1rem;
+  color: #616161;
+  margin-top: 15px;
+  line-height: 1.7;
+}
+
+.icon-users {
+  color: #17a2b8;
+}
+
+.icon-book {
+  color: #28a745;
+}
+
+.icon-star {
+  color: #ffc107;
+}
+
+/* Buttons */
+.btn-enroll {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.btn-enroll:hover {
+  background-color: #3b7ac3;
+}
+
+.btn-wishlist {
+  background-color: #ff6f61;
+  color: white;
+  margin-left: 15px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.btn-wishlist:hover {
+  background-color: #e65a4d;
+}
+
+/* Typography */
+h2.course-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  color: #2c3e50;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Card Hover Effect */
+.card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: none;
+  border-radius: 10px;
+}
+.card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Miscellaneous */
+.text-center {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.teacher-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.teacher-name {
+  font-size: 1rem;
+  color: #007bff;
+  font-weight: 600;
+  margin-left: 5px;
+}

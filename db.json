@@ -1,0 +1,169 @@
+{
+  "students": [
+    {
+      "username": "ali",
+      "email": "ali@gmail.com",
+      "password": "11111",
+      "phone": 12321515,
+      "role": "students",
+      "userId": "84e0",
+      "id": "84e0",
+      "enrolledCourses": [
+        "hcqnr1i",
+        "nm38d7o",
+        "j8u611l"
+      ]
+    },
+    {
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "12345",
+      "phone": 11111111111,
+      "role": "students",
+      "userId": "0cbf",
+      "enrolledCourses": [
+        "nm38d7o",
+        "ekp6je8",
+        "xvoi0vc",
+        "ho3cedf"
+      ],
+      "id": "0cbf"
+    },
+    {
+      "username": "ahmed",
+      "email": "ahmed@gmail.com",
+      "password": "11111",
+      "phone": 1111111111111111,
+      "role": "students",
+      "userId": "0799",
+      "enrolledCourses": [
+        "ekp6je8",
+        "xvoi0vc",
+        "nm38d7o"
+      ],
+      "id": "0799"
+    },
+    {
+      "username": "omar",
+      "email": "omar@gmail.com",
+      "password": "12345",
+      "phone": 1128453652,
+      "role": "students",
+      "userId": "c298",
+      "id": "c298",
+      "enrolledCourses": [
+        "ekp6je8"
+      ]
+    },
+    {
+      "id": "24ff",
+      "role": "students",
+      "username": "‫محمد اشرف‬‎",
+      "email": "ckgsvh9@gmail.com",
+      "password": "00000000",
+      "phone": 0
+    }
+  ],
+  "teachers": [
+    {
+      "username": "mohamed",
+      "email": "mo@gmail.com",
+      "phone": 105245245,
+      "role": "teachers",
+      "userId": "2601",
+      "password": "12345",
+      "courses": [
+        "nm38d7o",
+        "ho3cedf",
+        "j8u611l"
+      ],
+      "id": "2601"
+    },
+    {
+      "username": "Abdelrahman",
+      "email": "abb@gmail.com",
+      "phone": 15555555555,
+      "role": "teachers",
+      "userId": "ef7b",
+      "password": "11111",
+      "courses": [
+        "xvoi0vc",
+        "ekp6je8",
+        "hcqnr1i"
+      ],
+      "id": "ef7b"
+    }
+  ],
+  "courses": [
+    {
+      "id": "ho3cedf",
+      "name": "Angular",
+      "teacher": "mohamed",
+      "description": "Welcome to the Angular Course! This course is designed for beginners who want to learn the fundamentals of Angular. You will gain the skills to create and structure your own web pages from scratch.",
+      "numberOfLessons": 25,
+      "students": 1,
+      "price": 2500,
+      "hasDiscount": true,
+      "discountAmount": 40,
+      "finalPrice": 1500,
+      "image": "https://img.icons8.com/?size=100&id=l9a5tcSnBwcf&format=png&color=000000"
+    },
+    {
+      "id": "j8u611l",
+      "name": "React",
+      "teacher": "mohamed",
+      "description": "Welcome to the React Course! This course is designed for beginners who want to learn the fundamentals of React. You will gain the skills to create and structure your own web pages from scratch.",
+      "numberOfLessons": 35,
+      "students": 1,
+      "price": 2500,
+      "hasDiscount": true,
+      "discountAmount": 23,
+      "finalPrice": 1925,
+      "image": "https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000"
+    },
+    {
+      "id": "ekp6je8",
+      "name": "CSS",
+      "teacher": "Abdelrahman",
+      "description": "Welcome to the CSS Course! This course is designed for beginners who want to learn the fundamentals of CSS. You will gain the skills to create and structure your own web pages from scratch.",
+      "numberOfLessons": 25,
+      "students": 3,
+      "price": 350,
+      "hasDiscount": true,
+      "discountAmount": 10,
+      "finalPrice": 315,
+      "image": "https://img.icons8.com/?size=100&id=YjeKwnSQIBUq&format=png&color=000000"
+    },
+    {
+      "id": "xvoi0vc",
+      "name": "JavaScript",
+      "teacher": "Abdelrahman",
+      "description": "Welcome to the JS Course! This course is designed for beginners who want to learn the fundamentals of JS. You will gain the skills to create and structure your own web pages from scratch.",
+      "numberOfLessons": 35,
+      "students": 2,
+      "price": 1200,
+      "hasDiscount": true,
+      "discountAmount": 42,
+      "finalPrice": 696,
+      "image": "https://img.icons8.com/?size=100&id=108784&format=png&color=000000"
+    },
+    {
+      "id": "hcqnr1i",
+      "name": "Git",
+      "teacher": "Abdelrahman",
+      "description": "Learn Version Control Git/Github For Beginers From Zero To Hero.",
+      "numberOfLessons": 24,
+      "students": 1,
+      "price": 750,
+      "hasDiscount": true,
+      "discountAmount": 30,
+      "finalPrice": 525,
+      "image": "https://img.icons8.com/?size=100&id=38389&format=png&color=000000"
+    }
+  ],
+  "login": [
+    {
+      "id": "1"
+    }
+  ]
+}

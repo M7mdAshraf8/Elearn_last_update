@@ -1,0 +1,96 @@
+.single-team {
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease; 
+}
+.team-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.team-img img {
+    border-radius: 8px;
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+.team-social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8); 
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+}
+.team-social li {
+    margin: 0;
+}
+.team-social li a {
+    color: #fff;
+    background-color: #00C1DE;
+    padding: 0.7rem;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background 0.3s;
+}
+.team-social li a:hover {
+    background-color: #ff5e5e; 
+}
+.team-caption h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+.team-caption h3 a {
+    text-decoration: none;
+    color: inherit;
+}
+.team-caption h3 a:hover {
+    color: #00C1DE;
+}
+.team-caption p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 0;
+}
+.single-team:hover .team-caption h3 {
+    color: #ff5e5e;
+}
+.single-team:hover .team-social {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+.single-team:hover .team-img img {
+    transform: scale(1.1); 
+}
+@media (max-width: 768px) {
+    .single-team {
+        margin-bottom: 20px;
+    }
+    .team-img img {
+        width: 100%;
+        height: auto;
+    }
+    .team-social {
+        gap: 10px;
+    }
+    .team-caption h3 {
+        font-size: 18px;
+    }
+    .team-caption p {
+        font-size: 12px;
+    }
+}

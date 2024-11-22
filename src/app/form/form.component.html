@@ -1,0 +1,240 @@
+<!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> -->
+<!-- modal.component.html -->
+<div
+  class="modal fade"
+  id="formModal"
+  tabindex="-1"
+  aria-labelledby="formModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="formModalLabel">Login or Signup</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <!-- Forms inside modal -->
+        <div class="form_container">
+          <!-- Login Form -->
+          <form
+            (ngSubmit)="loginSubmit()"
+            [formGroup]="loginForm"
+            class="form login_form"
+            *ngIf="showenForm.getValue() === 'login'"
+          >
+            <h2>Log In</h2>
+            <div class="input_box mb-5">
+              <i class="fas fa-user role_icon"></i>
+              <!-- <label for="role" class="role_label">I am a:</label> -->
+              <select
+                id="role"
+                name="role"
+                class="form-select"
+                (change)="getRule($event)"
+              >
+                <option value="" disabled>Select your role</option>
+                <option value="students">Student</option>
+                <option value="teachers">Teacher</option>
+              </select>
+            </div>
+            <div class="input_box mb-5">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="form-control"
+                formControlName="email"
+              />
+              <i class="fas fa-envelope email"></i>
+              @if (loginForm.controls['email'].invalid &&
+              loginForm.controls['email'].touched) { @if
+              (loginForm.controls['email'].errors?.['required']) {
+              <span class="error-message">Email is required</span>
+              } @else if (loginForm.controls['email'].errors?.['email']) {
+              <span class="error-message">Write a valid email</span>
+              } }
+            </div>
+            <div class="input_box mb-5">
+              <input
+                type="password"
+                placeholder="Enter your password"
+                class="form-control"
+                formControlName="password"
+                #passwordField
+              />
+              <i class="fas fa-lock password"></i>
+              <i class="fas fa-eye-slash pw_toggle pw_hide" #toggleIcon (click)="togglePassword(passwordField, toggleIcon)"></i>
+              @if (loginForm.controls['password'].invalid &&
+              loginForm.controls['password'].touched) { @if
+              (loginForm.controls['password'].errors?.['required']) {
+              <span class="error-message">Password is required</span>
+              } @else if (loginForm.controls['password'].errors?.['minlength'])
+              {
+              <span class="error-message">Min length must be 5</span>
+              } }
+            </div>
+            <div class="option_field mb-3">
+              <span class="checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">Remember me</label>
+              </span>
+              <a href="#" class="forgot_pw">Forgot password?</a>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary w-100"
+              [disabled]="loginForm.invalid"
+            >
+              Login Now
+            </button>
+            <div class="login_signup mt-2">
+              Don't have an Account?
+              <span (click)="toggleShowenForm()">Signup</span>
+            </div>
+          </form>
+
+          <!-- Signup Form -->
+          <form
+            (ngSubmit)="signUpSubmit()"
+            [formGroup]="signUpForm"
+            class="form signup_form"
+            *ngIf="showenForm.getValue() === 'sign-up'"
+          >
+            <h2>Sign Up</h2>
+            <div class="input_box mb-5">
+              <i class="fas fa-user role_icon"></i>
+              <!-- <label for="role" class="role_label">I am a:</label> -->
+              <select
+                id="role"
+                name="role"
+                class="form-select"
+                (change)="getRule($event)"
+              >
+                <option value="" disabled>Select your role</option>
+                <option value="students">Student</option>
+                <option value="teachers">Teacher</option>
+              </select>
+            </div>
+            <div class="input_box mb-5 subject_box">
+              <input
+                type="text"
+                placeholder="Enter your subject"
+                id="subject"
+                name="subject"
+                class="form-control"
+              />
+              <i class="fas fa-book subject_icon"></i>
+            </div>
+            <div class="input_box mb-5">
+              <input
+                type="text"
+                placeholder="Enter your full name"
+                class="form-control"
+                formControlName="username"
+              />
+              <i class="fas fa-user fullname"></i>
+              @if (signUpForm.controls['username'].invalid &&
+              signUpForm.controls['username'].touched) { @if
+              (signUpForm.controls['username'].errors?.['required']) {
+              <span class="error-message">Username is required</span>
+              } @else if (signUpForm.controls['username'].errors?.['minlength'])
+              {
+              <span class="error-message">Write a valid username</span>
+              } }
+            </div>
+            <div class="input_box mb-5">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="form-control"
+                formControlName="email"
+              />
+              <i class="fas fa-envelope email"></i>
+              @if (signUpForm.controls['email'].invalid &&
+              signUpForm.controls['email'].touched) { @if
+              (signUpForm.controls['email'].errors?.['required']) {
+              <span class="error-message">Email is required</span>
+              } @else if (signUpForm.controls['email'].errors?.['email']) {
+              <span class="error-message">Write a valid email</span>
+              } }
+            </div>
+            <div class="input_box mb-5">
+              <input
+                type="number"
+                placeholder="Enter your phone number"
+                class="form-control"
+                formControlName="phone"
+              />
+              <i class="fas fa-phone phone"></i>
+              @if (signUpForm.controls['phone'].invalid &&
+              signUpForm.controls['phone'].touched) { @if
+              (signUpForm.controls['phone'].errors?.['required']) {
+              <span class="error-message">phone number is required</span>
+              } @else if (signUpForm.controls['phone'].errors?.['minlength']) {
+              <span class="error-message">Write a valid phone number</span>
+              } }
+            </div>
+
+            <div class="input_box mb-5">
+              <input
+                type="password"
+                placeholder="Create password"
+                class="form-control"
+                formControlName="password"
+                #passwordField
+              />
+              <i class="fas fa-lock password"></i>
+              <i class="fas fa-eye-slash pw_toggle pw_hide" #toggleIcon (click)="togglePassword(passwordField, toggleIcon)"></i>
+              @if (signUpForm.controls['password'].invalid &&
+              signUpForm.controls['password'].touched) { @if
+              (signUpForm.controls['password'].errors?.['required']) {
+              <span class="error-message">Password is required</span>
+              } @else if (signUpForm.controls['password'].errors?.['minlength'])
+              {
+              <span class="error-message">Write a valid password</span>
+              } }
+            </div>
+            <div class="input_box mb-5">
+              <input
+                type="password"
+                placeholder="Confirm password"
+                class="form-control"
+                formControlName="confirmPassword"
+                #passwordCField
+              />
+              <i class="fas fa-lock password"></i>
+              <i class="fas fa-eye-slash pw_toggle pw_hide" #toggleIconC (click)="toggleCPassword(passwordCField, toggleIconC)"></i>
+              @if (signUpForm.controls['confirmPassword'].invalid &&
+              signUpForm.controls['confirmPassword'].touched) { @if
+              (signUpForm.controls['confirmPassword'].errors?.['required']) {
+              <span class="error-message">confirm-Password is required</span>
+              } @else if
+              (signUpForm.controls['confirmPassword'].errors?.['minlength']) {
+              <span class="error-message">must be a valid password</span>
+              } }
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary w-100"
+              [disabled]="
+                signUpForm.invalid ||
+                signUpForm.value.password != signUpForm.value.confirmPassword
+              "
+            >
+              Sign up Now
+            </button>
+            <div class="login_signup mt-2">
+              Already have an Account?
+              <span (click)="toggleShowenForm()">Login</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+<!--aside-->
+<app-aside></app-aside>
+<main>
+  <section class="settings-section">
+    <div class="container mt-4">
+      <h2 class="mb-3">Teacher Settings</h2>
+      <form
+        class="settings-form shadow-sm rounded bg-light p-4"
+        [formGroup]="formData"
+        (ngSubmit)="updateData()"
+      >
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              placeholder="First Name"
+              formControlName="firstName"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              placeholder="Last Name"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email Address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter your email"
+              formControlName="email"
+            />
+          </div>
+
+          <div class="col-md-6">
+            <label for="number" class="form-label">Phone Number</label>
+            <input
+              type="number"
+              class="form-control"
+              id="number"
+              placeholder="Enter your PhoneNumber"
+              formControlName="phone"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+              formControlName="password"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="confirmPassword" class="form-label"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="confirmPassword"
+              placeholder="Confirm Password"
+              formControlName="confirmPassword"
+            />
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <button
+            type="submit"
+            class="btn btn-purple rounded-pill shadow-sm"
+            [disabled]="
+              formData.invalid ||
+              formData.value.password != formData.value.confirmPassword
+            "
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,47 @@
+.stats {
+    background-color: #f9f9f9;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.stat-item i {
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.counter {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.review {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+@media (max-width: 768px) {
+    .counter {
+        font-size: 2rem;
+    }
+
+    .stat-item i {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .counter {
+        font-size: 1.75rem;
+    }
+
+    .stat-item i {
+        font-size: 2rem;
+    }
+}

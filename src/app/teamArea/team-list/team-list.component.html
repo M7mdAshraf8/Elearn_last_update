@@ -1,0 +1,18 @@
+<div class="team-area section-bg ">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="cl-xl-7 col-lg-8 col-md-10">
+                <div class="section-tittle section-tittle2 text-center">
+                    <h2>Our Best Teachers</h2>
+                </div> 
+            </div>
+        </div>
+        <div class="row">
+            @for(team of teams; track team.id){
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <app-team-card [teamItem]="team"></app-team-card>
+            </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+.card {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: left;
+}
+.card img {
+    border-bottom: 1px solid #ddd;
+}
+.card-body {
+    padding: 20px;
+    background-color: white;
+}
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.2rem;
+}
+.details {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+.lessons-info,
+.students-count {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.lessons-info::before,
+.students-count::before {
+    content: '⏱️';
+    margin-right: 5px;
+}
+.students-count::before {
+    content: '👥';
+}
+.price-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #6a5acd;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.btn-add-course {
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+.btn-add-course:hover {
+    background-color: #836fff;
+    transform: scale(1.05); 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); 
+}
+.btn-add-course:active {
+    transform: scale(0.95);
+    box-shadow: none;
+}

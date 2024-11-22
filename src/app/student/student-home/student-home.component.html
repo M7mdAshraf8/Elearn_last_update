@@ -1,0 +1,91 @@
+<app-aside></app-aside>
+<main>
+  <!-- home section  -->
+  <section class="home-section py-5">
+    <div class="home-container">
+      <div class="row">
+        <div
+          class="col-md-3 d-flex flex-column align-items-center justify-content-center border-end border-3"
+        >
+          <img
+            src="../../assets/img/img0.jpg"
+            id="profileImage"
+            class="personal-img img-fluid img0 rounded-circle"
+            alt="Student Image"
+            style="width: 200px; height: 200px"
+          />
+          <h3 id="studentName" class="mt-2">
+            {{ loginUser.username }}
+          </h3>
+          <!-- Contact Icons -->
+          <div class="mt-3">
+            <a
+              href="loginUser.email"
+              class="text-decoration-none icon2 me-3"
+              title="Email"
+            >
+              <i class="fas fa-envelope fa-2x"></i>
+            </a>
+            <a
+              href="loginUser.phone"
+              class="text-decoration-none icon2 me-3"
+              title="Phone"
+            >
+              <i class="fas fa-phone fa-2x"></i>
+            </a>
+            <a
+              href="loginUser.LinkedIn"
+              class="text-decoration-none icon2 me-3"
+              title="LinkedIn"
+            >
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a
+              href="loginUser.facebook"
+              class="text-decoration-none icon2"
+              title="facebook"
+            >
+              <i class="fa-brands fa-facebook fa-2x"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-7 ms-auto">
+          <div class="row mb-5">
+            <div class="col data-card py-4">
+              <h3 class="border-bottom pb-3">Contact Info</h3>
+              <h6 class="fw-bold mb-4">
+                Email:
+                <span class="span-data span-email fw-medium">
+                  {{ loginUser.email }}
+                </span>
+              </h6>
+              <h6 class="fw-bold mb-4">
+                Phone:
+                <span class="span-data span-phone fw-medium">{{
+                  loginUser.phone
+                }}</span>
+              </h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col data-card py-4">
+              <h3 class="border-bottom pb-3">Academic Info</h3>
+              <h6 class="fw-bold mb-4">
+                Courses:[ @for (course of enrolledCourses; track course.id) {
+                <span
+                  class="span-data fw-medium"
+                  [ngClass]="$index != enrolledCourses.length - 1 ? 'me-3' : ''"
+                  >{{ course.name }} @if ($index != enrolledCourses.length - 1)
+                  { ,}
+                </span>
+                } ]
+              </h6>
+              <h6 class="fw-bold mb-4">Grades:</h6>
+              <h6 class="fw-bold mb-4">Attendence:</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

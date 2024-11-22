@@ -1,0 +1,131 @@
+<app-aside></app-aside>
+<div class="container my-5">
+  <h2 class="mb-4 text-primary">Add New Course</h2>
+  <form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="courseName" class="form-label">Course Name:</label>
+      <input
+        id="courseName"
+        name="courseName"
+        required
+        class="form-control"
+        formControlName="name"
+      />
+      @if (courseForm.controls['name'].invalid &&
+      courseForm.controls['name'].touched) { @if
+      (courseForm.controls['name'].errors?.['required']) {
+      <span class="error-message">The name of the course is required</span>
+      } @else if (courseForm.controls['name'].errors?.['minlength']) {
+      <span class="error-message">Write a valid Course Name</span>
+      } }
+    </div>
+    <div class="mb-3">
+      <label for="courseDescription" class="form-label">Description:</label>
+      <input
+        id="courseDescription"
+        name="courseDescription"
+        required
+        class="form-control"
+        formControlName="description"
+      />
+      @if (courseForm.controls['description'].invalid &&
+      courseForm.controls['description'].touched) { @if
+      (courseForm.controls['description'].errors?.['required']) {
+      <span class="error-message"
+        >The description of the course is required</span
+      >
+      } @else if (courseForm.controls['description'].errors?.['minlength']) {
+      <span class="error-message">Write a valid description</span>
+      } }
+    </div>
+
+    <!-- image url -->
+    <div class="mb-3">
+      <label for="imageUrl" class="form-label">Image URL:</label>
+      <input
+        id="imageUrl"
+        name="imageUrl"
+        type="text"
+        class="form-control"
+        formControlName="imageUrl"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="lessonsNumber" class="form-label">Number of Lessons:</label>
+      <input
+        type="number"
+        id="lessonsNumber"
+        name="lessonsNumber"
+        required
+        min="1"
+        class="form-control"
+        formControlName="numberOfLessons"
+      />
+      @if (courseForm.controls['numberOfLessons'].invalid &&
+      courseForm.controls['numberOfLessons'].touched) { @if
+      (courseForm.controls['numberOfLessons'].errors?.['required']) {
+      <span class="error-message">The numberOfLessons is required</span>
+      } @else if (courseForm.controls['numberOfLessons'].errors?.['min']) {
+      <span class="error-message">Min lessons is 1</span>
+      } }
+    </div>
+
+    <div class="mb-3">
+      <label for="price" class="form-label">price :</label>
+      <input
+        type="number"
+        id="price"
+        name="price"
+        class="form-control"
+        formControlName="price"
+      />
+      @if (courseForm.controls['price'].invalid &&
+      courseForm.controls['price'].touched) { @if
+      (courseForm.controls['price'].errors?.['required']) {
+      <span class="error-message">The price is required</span>
+      } @else if (courseForm.controls['price'].errors?.['min']) {
+      <span class="error-message">min is 0</span>
+      }}
+    </div>
+    <div class="form-check mb-3">
+      <input
+        type="checkbox"
+        id="hasDiscount"
+        name="hasDiscount"
+        class="form-check-input"
+        formControlName="hasDiscount"
+      />
+      <label for="hasDiscount" class="form-check-label"
+        >Is there a discount?</label
+      >
+    </div>
+    <div class="mb-3">
+      <label for="discountAmount" class="form-label"
+        >Discount Amount (%):</label
+      >
+      <input
+        type="number"
+        id="discountAmount"
+        name="discountAmount"
+        class="form-control"
+        formControlName="discountAmount"
+      />
+      @if (courseForm.controls['discountAmount'].invalid &&
+      courseForm.controls['discountAmount'].touched) { @if
+      (courseForm.controls['discountAmount'].errors?.['required']) {
+      <span class="error-message">The discountAmount is required</span>
+      } @else if (courseForm.controls['discountAmount'].errors?.['min']) {
+      <span class="error-message">min is 0</span>
+      }@else if (courseForm.controls['discountAmount'].errors?.['max']) {
+      <span class="error-message">max is 100</span>
+      } }
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="courseForm.invalid"
+    >
+      Add Course
+    </button>
+  </form>
+</div>

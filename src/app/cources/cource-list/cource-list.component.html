@@ -1,0 +1,20 @@
+<section class="our_courses pb-5">
+    <div class="container">
+        <div class="header text-center my-5">
+            <h1>Our Courses</h1>
+        </div>
+        <div class="text-center mb-3">
+            <button id="prevBtn" class="btn btn-primary mx-2" (click)="prevCourses()">Previous</button>
+            <button id="nextBtn" class="btn btn-primary mx-2" (click)="nextCourses()">Next</button>
+        </div>
+        <div class="row flex-nowrap align-items-center justify-content-around justify-content-lg-center py-4 my-4" id="courseRow">
+            <ng-container *ngFor="let course of getCoursesForDisplay(); let i = index">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 justify-content-center">
+                    <app-cource-card [courseItem]="course"></app-cource-card>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>
+
+

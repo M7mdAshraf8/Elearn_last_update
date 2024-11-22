@@ -1,0 +1,147 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"); */
+
+/* Modal Custom Styles */
+.modal-content {
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px, rgba(0, 0, 0, 0.05) 0px 6px 6px;
+  background-color: #f9f9f9;
+  font-family: "Poppins", sans-serif;
+  transition: transform 0.3s ease-in-out;
+}
+
+.modal-content:hover {
+  transform: scale(1.02);
+}
+
+/* Form Styling */
+.input_box {
+  position: relative;
+  margin-top: 25px;
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.input_box input,
+.input_box select {
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 0 40px 0 45px; /* Padding for icon */
+  border-bottom: 2px solid #ddd;
+  outline: none;
+  background: #ffffff;
+  color: #333;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.input_box input:focus,
+.input_box select:focus {
+  border-bottom-color: #7d2ae8;
+}
+
+.input_box i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #7d2ae8;
+  transition: color 0.3s ease;
+}
+
+.input_box input:focus + i,
+.input_box select:focus + i {
+  color: #5b1dbf;
+}
+
+/* Password Toggle Icon */
+.input_box i.pw_hide {
+  right: 10px;
+  left: auto; /* Keep on the right */
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Error Message */
+.error-message {
+  font-size: 13px;
+  color: #ff4d4f;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Login/Signup Link */
+.login_signup {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 20px;
+  color: #7d2ae8;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.login_signup span {
+  text-decoration: none;
+}
+
+.login_signup span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #3d0d8f;
+}
+
+/* Role Selection Styles */
+.role_label {
+  font-size: 15px;
+  color: #0b0217;
+  margin-bottom: 8px;
+  display: block;
+  font-weight: 500;
+}
+
+/* Subject Field */
+.subject_box {
+  margin-top: 25px;
+  display: none; /* Default hidden */
+}
+
+/* Submit Button */
+.btn-primary {
+  background-color: #7d2ae8;
+  border: none;
+  font-size: 16px;
+  padding: 12px;
+  width: 100%;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(125, 42, 232, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #5b1dbf;
+  box-shadow: 0 6px 14px rgba(125, 42, 232, 0.5);
+}
+
+.btn-primary:active {
+  background-color: #3d0d8f;
+}
+
+/* Modal Transitions */
+.modal.fade .modal-dialog {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}

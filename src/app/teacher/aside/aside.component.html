@@ -1,0 +1,31 @@
+<aside class="d-flex flex-column align-items-center justify-content-between">
+    <div class="text-center mb-4">
+      <img [src]="profileImg" id="sidebarImage" class="img-fluid rounded-circle " alt="Teacher Image" style="width: 120px;">
+  
+    </div>
+      <nav>
+        <ul>
+          <li>
+            <a  class="aside-btn" style="color: #6a5acd;" [routerLink]="['/teacher/profile']" data-text="profile">
+              <i class="fas fa-user-circle"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="aside-btn" style="color: #6a5acd;" [routerLink]="['/teacher/courses']" data-text="Courses">
+              <i class="fas fa-book"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="aside-btn" style="color: #6a5acd;"  [routerLink]="['/teacher/attendance']"  data-text="Attendence">
+              <i class="fas fa-user-check"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="aside-btn" style="color: #6a5acd;" [routerLink]="['/teacher/setting']"  data-text="Settings">
+              <i class="fas fa-cog"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+

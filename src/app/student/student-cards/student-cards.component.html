@@ -1,0 +1,34 @@
+<div class="card card1" style="width: 18rem">
+  <img [src]="cardItems.image" class="card-img-top" alt="Course Image" />
+  <div class="card-body">
+    <h4 class="card-title">{{ cardItems.name }}</h4>
+    <span class="old-price" style="text-decoration: line-through">{{
+      cardItems.price
+    }}</span>
+    <span class="new-price ms-3">{{ cardItems.finalPrice }}</span>
+    <p class="card-text"></p>
+    <!-- Icons for number of students, lessons, and ratings -->
+    <div class="d-flex align-items-center mb-2 icon-users">
+      <i class="fas fa-users me-2"></i
+      ><span>{{ cardItems.students }} Students</span>
+    </div>
+    <div class="d-flex align-items-center mb-2 icon-book">
+      <i class="fas fa-book me-2"></i
+      ><span>{{ cardItems.numberOfLessons }} Lessons</span>
+    </div>
+    <div class="d-flex align-items-center mb-2 icon-star">
+      <i class="fas fa-star me-2"></i><span>{{ cardItems.rating }} Rating</span>
+    </div>
+    <div class="d-flex align-items-center mb-2">
+      <span class="teacher-label">BY:</span>
+      <span class="teacher-name">{{ cardItems.teacher }}</span>
+    </div>
+
+    <button
+      class="btn btn-successs"
+      [routerLink]="['/student/courses/' + cardItems.id]"
+    >
+      Details
+    </button>
+  </div>
+</div>

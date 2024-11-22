@@ -1,0 +1,47 @@
+main {
+  padding: 20px;
+}
+
+.settings-section {
+  background-color: #ffffff; 
+  border-radius: 12px; 
+  padding: 30px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+  margin-left: 250px;
+  padding-bottom: 100px;
+}
+
+h2 {
+  font-size: 1.5rem; 
+  color: #6f42c1; 
+  border-bottom: 2px solid #6a5acd;
+  left:0;
+  padding-bottom: 20px;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.form-control {
+  border: 1px solid #6f42c1; 
+  border-radius: 6px; 
+  padding: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.form-control:focus {
+  border-color: #5a32a3; 
+  box-shadow: 0 0 5px rgba(106, 27, 154, 0.5); 
+}
+
+.btn-purple {
+  background-color: #6f42c1; 
+  border: none;
+  padding: 10px 20px; 
+  font-size: 14px;
+  color: white; 
+}
+
+.btn-purple:hover {
+  background-color: #5a32a3; 
+}

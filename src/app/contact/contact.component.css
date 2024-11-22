@@ -1,0 +1,142 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    text-align: center;
+    width: 20%;
+}
+
+.contact-item .icon {
+    font-size: 24px;
+    color: white;
+    background-color: #00a7d1;
+    padding: 20px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.contact-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #00a7d1;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+.contact-form-container {
+    background-color: #f3f3f396;
+    padding: 20px;
+
+    max-width: 600px;
+    width: 100%;
+}
+
+h2 {
+    margin-top: 0;
+    color: #00a7d1;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: none; 
+    border-bottom: 2px solid #ccc;
+    background: transparent; 
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-bottom 0.3s ease;
+    outline: none; 
+}
+
+input:focus, textarea:focus {
+    border-bottom: 2px solid #00a7d1;
+}
+
+
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    display: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+.submit-button {
+    background-color: #00a7d1;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 50%;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #06809e;
+}
+
+.contact-page {
+    display: flex; 
+    justify-content: space-between; 
+    width: 80%;
+    margin: auto;
+}
+.contact-form-container {
+    flex: 1;
+    margin-right: 20px;
+}
+.map-container {
+    flex: 1; 
+}
+.find_map{
+    color: #00a7d1;
+    text-align: center;
+}

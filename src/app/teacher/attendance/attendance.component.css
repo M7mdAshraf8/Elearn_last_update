@@ -1,0 +1,32 @@
+
+table .head {
+  background-color: #513dd4 ;
+  color: white ;
+  
+  }
+
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  .table th, .table td {
+    padding: 12px;
+    vertical-align: middle;
+  }
+  h2 {
+    border-bottom: 2px solid #6a5acd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color:  #6a5acd;
+  }
+  .content-wrapper {
+    margin-left: 250px; 
+    padding: 20px;
+  }
+  .content-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}

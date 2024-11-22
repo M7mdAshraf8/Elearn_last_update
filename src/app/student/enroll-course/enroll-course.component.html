@@ -1,0 +1,53 @@
+<app-aside></app-aside>
+<main>
+  <div class="container mt-5">
+    <h2>Available Courses</h2>
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let course of courses | async">
+        <div class="card mb-4">
+          <img [src]="course.image" class="card-img-top" alt="Course Image" />
+          <div class="card-body">
+            <h5 class="card-title">{{ course.name }}</h5>
+            <p class="card-text">{{ course.description }}</p>
+
+            <div class="d-flex align-items-center mb-3">
+              <p class="course-price me-3">
+                <strong>Final Price:</strong> ${{ course.finalPrice }}
+              </p>
+              <p class="course-old-price">
+                <small
+                  ><s>${{ course.price }}</s></small
+                >
+              </p>
+            </div>
+
+            <ul class="course-details list-unstyled">
+              <li>
+                <strong>Students Enrolled:</strong>
+                {{ course.students || "Not available" }}
+                <i class="fas fa-users ms-2"></i>
+              </li>
+              <li>
+                <strong>Lessons:</strong> {{ course.numberOfLessons }}
+                <i class="fas fa-book ms-2"></i>
+              </li>
+              <li>
+                <strong>Rating:</strong> {{ course.rating || "Not rated yet" }}
+                <i class="fas fa-star ms-2"></i>
+              </li>
+            </ul>
+
+            <div class="d-flex align-items-center mb-2">
+              <span class="teacher-label">BY:</span>
+              <span class="teacher-name">{{ course.teacher }}</span>
+            </div>
+
+            <button class="btn btn-primary mt-3" (click)="enroll(course.id)">
+              Enroll Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

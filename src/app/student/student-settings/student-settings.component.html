@@ -1,0 +1,112 @@
+<app-aside></app-aside>
+<main>
+  <!-- setting-section  -->
+
+  <section class="settings-section m-auto mt-4 w-75">
+    <h2 class="text-start mb-4">Edit your data</h2>
+    <div class="form-container">
+      <form
+        class="settings-form shadow-sm rounded bg-light p-4"
+        [formGroup]="formData"
+        (ngSubmit)="updateData()"
+      >
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="First Name"
+              formControlName="firstName"
+            />
+            @if (formData.controls['firstName'].invalid &&
+            formData.controls['firstName'].touched) { @if
+            (formData.controls['firstName'].errors?.['required']) {
+            <span class="error-message">firstName is required</span>
+            } @else if (formData.controls['firstName'].errors?.['minlength']) {
+            <span class="error-message">Write a valid firstName</span>
+            } }
+          </div>
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" placeholder="Last Name" />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Enter your email"
+            formControlName="email"
+          />
+          @if (formData.controls['email'].invalid &&
+          formData.controls['email'].touched) { @if
+          (formData.controls['email'].errors?.['required']) {
+          <span class="error-message">Email is required</span>
+          } @else if (formData.controls['email'].errors?.['email']) {
+          <span class="error-message">Write a valid email</span>
+          } }
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Enter your phone number"
+            formControlName="phone"
+          />
+          @if (formData.controls['phone'].invalid &&
+          formData.controls['phone'].touched) { @if
+          (formData.controls['phone'].errors?.['required']) {
+          <span class="error-message">phone is required</span>
+          } @else if (formData.controls['phone'].errors?.['minlength']) {
+          <span class="error-message">min length is 9</span>
+          } }
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              formControlName="password"
+            />
+            @if (formData.controls['password'].invalid &&
+            formData.controls['password'].touched) { @if
+            (formData.controls['password'].errors?.['required']) {
+            <span class="error-message">password is required</span>
+            } @else if (formData.controls['password'].errors?.['minlength']) {
+            <span class="error-message">min length is 5</span>
+            } }
+          </div>
+          <div class="col-md-6">
+            <label for="confirmPassword" class="form-label"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Confirm Password"
+              formControlName="confirmPassword"
+            />
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <button
+            type="submit"
+            class="btn btn-purple rounded-pill shadow-sm"
+            [disabled]="
+              formData.invalid ||
+              formData.value.password != formData.value.confirmPassword
+            "
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>

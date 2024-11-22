@@ -1,0 +1,128 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+  <div class="container">
+    <a class="navbar-brand" href="#"
+      ><img src="assets/img/logo2.png" alt="logo" width="80"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 column-gap-3">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="page"
+            [routerLink]="['home']"
+            routerLinkActive="active"
+            >Home</a
+          >
+        </li>
+        <li *ngIf="user?.role == 'students'" class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['student']"
+            routerLinkActive="active"
+            >Students</a
+          >
+        </li>
+        <li *ngIf="user?.role == 'teachers'" class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['teacher']"
+            routerLinkActive="active"
+            >Teachers</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Cources
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" [routerLink]="['/courses/1']">CSS</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/courses/2']">C++</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/courses/3']">FLUTTER</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/courses/4']">HTML</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/courses/5']">JAVA</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/courses/6']">JS</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/courses/7']">PYTHON</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/courses/8']">ANGULAR</a>
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/courses/9']"
+                >TAILWIND</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/courses/10']"
+                >BOOTSTRAP</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['contact']"
+            routerLinkActive="active"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <div *ngIf="user == null" class="d-flex">
+        <button
+          class="button-hover me-2 px-4 mb-2 mb-lg-0 log_in"
+          data-bs-toggle="modal"
+          data-bs-target="#formModal"
+        >
+          Log in / sign up
+          <div class="arrow-wrapper">
+            <div class="arrow"></div>
+          </div>
+        </button>
+      </div>
+
+      <div *ngIf="user !== null" class="d-flex">
+        <button
+          class="button-hover me-2 px-4 mb-2 mb-lg-0 log_in"
+          (click)="logOut()"
+        >
+          Log Out
+          <div class="arrow-wrapper">
+            <div class="arrow"></div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+<!--  -->
+<app-form></app-form>

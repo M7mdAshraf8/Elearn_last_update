@@ -1,0 +1,78 @@
+ .course-container {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Course Image Styling */
+  .course-image {
+    max-height: 500px;
+    width:100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Course Title and Description */
+  .course-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #343a40;
+  }
+
+  .course-description {
+    font-size: 1.25rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+  }
+  .icon-users, .icon-book, .icon-star {
+    color: #007bff;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  
+  .icon-book {
+    color: #28a745;
+  }
+  .icon-star {
+    color: #ffc107;
+  }
+  .new-price {
+    color: #495057;
+    font-size: 20px;
+  }
+  .course-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6a5acd;
+  }
+  .course-old-price {
+    font-size: 1.25rem;
+    color: #6c757d;
+    text-decoration: line-through;
+    margin-left: 10px;
+  }
+  .course-details {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    line-height: 1.8;
+  }
+  .btn-enroll{
+    background-color:#6a5acd ;
+    color:white;
+  }
+  .btn-enroll:hover{
+    background-color: #6151c9;
+  }
+  .btn-wishlist{
+    background-color: #007bff;
+    margin-left: 20px;
+    color:white;
+  }
+  .btn-wishlist:hover{
+    background-color:#0778f0 ;
+  }
+
+  
